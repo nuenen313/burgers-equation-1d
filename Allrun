@@ -1,0 +1,15 @@
+#!/bin/sh
+
+
+cd ${0%/*} || exit 1
+
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+python3 sineList.py
+
+
+application=$(getApplication)
+
+runApplication blockMesh -dict $FOAM_RUN/BurgersEq1D/system/blockMeshDict
+
+runApplication $application
