@@ -27,6 +27,7 @@ gradSchemes
 divSchemes
 {
     default         none;
+    //uncomment the line below to use the linear scheme:
     //div(phi,U)      Gauss linear;
     div(phi,U)    Gauss upwind;
 }
